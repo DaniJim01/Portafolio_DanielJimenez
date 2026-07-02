@@ -15,8 +15,8 @@ public class Producto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
     private Integer idProducto;
-
-    // ← REEMPLAZA "private Integer idCategoria" por esto:
+    //private Integer idCategoria;
+    
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
